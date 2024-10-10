@@ -1,11 +1,6 @@
 from PIL import Image
 
 image = Image.open("monro.jpg")
-
-print("Ширина - ", image.width)
-print("Высота - ", image.height)
-print("Цветовая модель - ", image.mode)
-
 red, green, blue = image.split()
 
 # red channel
@@ -30,6 +25,7 @@ image_blue = Image.blend(image3, image4, 0.3)
 coordinates5 = (25, 0, image.width-25, image.height)
 image_green = green.crop(coordinates5)
 
+#merge image
 final_image = Image.merge("RGB", (image_red, image_green, image_blue))
 final_image.thumbnail((80, 80))
 final_image.save("final_image.jpg")
