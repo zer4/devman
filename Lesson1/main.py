@@ -1,4 +1,4 @@
-  from time import sleep
+from time import sleep
 
 print("\u001b[32m", end='')
 print("""\
